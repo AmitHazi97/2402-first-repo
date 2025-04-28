@@ -1,6 +1,12 @@
 name: Run Tests
 
 on:
+  push:
+    branches:
+        - main
+    pull_request:
+      branches:
+        - main
   workflow_dispatch:
 
 jobs:
@@ -13,3 +19,5 @@ jobs:
       - name: show files
         run: |
           ls -ltr
+
+----
